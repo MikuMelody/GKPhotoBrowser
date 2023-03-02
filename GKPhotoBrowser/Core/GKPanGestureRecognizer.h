@@ -19,6 +19,8 @@ typedef NS_ENUM(NSUInteger, GKPanGestureRecognizerDirection) {
 
 @property (nonatomic, assign) GKPanGestureRecognizerDirection   direction;
 
+@property(assign, nonatomic) BOOL oneImage;
+
 @end
 
 NS_ASSUME_NONNULL_END
