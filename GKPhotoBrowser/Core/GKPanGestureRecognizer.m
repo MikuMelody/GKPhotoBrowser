@@ -31,10 +31,23 @@ int const static kDirectionPanThreshold = 5;
     _moveY += prevPoint.y - nowPoint.y;
     if (!self.isDrag) {
         if (abs(_moveX) > kDirectionPanThreshold) {
-            if (_direction == GKPanGestureRecognizerDirectionVertical) {
-                self.state = UIGestureRecognizerStateFailed;
-            }else {
+            
+             if (self.oneImage){
+
                 _isDrag = YES;
+
+            }else{
+
+                if (_direction == GKPanGestureRecognizerDirectionVertical) {
+
+                    self.state = UIGestureRecognizerStateFailed;
+
+                }else {
+
+                    _isDrag = YES;
+
+                }
+
             }
         }else if (abs(_moveY) > kDirectionPanThreshold) {
             if (_direction == GKPanGestureRecognizerDirectionHorizontal) {
