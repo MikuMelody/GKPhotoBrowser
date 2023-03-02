@@ -1408,6 +1408,7 @@ static Class imageManagerClass = nil;
     if (!_panGesture) {
         _panGesture = [[GKPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
         _panGesture.direction = GKPanGestureRecognizerDirectionVertical;
+	_panGesture.oneImage = self.photos.count == 1 ? YES:NO;
     }
     return _panGesture;
 }
